@@ -13,3 +13,6 @@ Machine learning algorithms have 3 broad categories -
 With linear regression, the objective is to fit a line through the distribution which is nearest to most of the points in the training set.
 In simple linear regression, the regression line minimizes the sum of distances from the individual points, that is, the sum of the “Square of Residuals”. Hence, this method is also called the “Ordinary Least Square”.
 Linear regression can also be achieved in case of multidimensional data i.e. data-sets that have multiple features. In this case, the ‘line’ is just a higher dimensional plane with dimensions ‘N-1’, N being the dimension of the dataset.
+### b) Classification
+#### Logistic Regression
+![ml3](https://user-images.githubusercontent.com/42317258/50926175-62f06c80-147a-11e9-8c1f-4fd239cfa32f.PNG)
