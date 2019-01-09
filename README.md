@@ -3,8 +3,6 @@
         ![ml1](https://user-images.githubusercontent.com/42317258/50925123-61717500-1477-11e9-9b73-6fe5eb5c57d9.PNG)
 
 Machine learning algorithms have 3 broad categories -
-
-### Supervised learning
-               — the input features and the output labels are defined.
-Unsupervised learning — the dataset is unlabeled and the goal is to discover hidden relationships.
-Reinforcement learning — some form of feedback loop is present and there is a need to optimize some parameter.
+1.Supervised learning — the input features and the output labels are defined.
+2.Unsupervised learning — the dataset is unlabeled and the goal is to discover hidden relationships.
+3.Reinforcement learning — some form of feedback loop is present and there is a need to optimize some parameter.
