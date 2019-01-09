@@ -32,3 +32,14 @@ Decision tree is a classifier in the form of a tree structure.
 Decision trees classify instances or examples by starting at the root of the tree and moving through it until a leaf node which is the target value.
 Generating decision trees are useful as they mimic human understanding and thus, the models are easy to understand.
 Small trees are better as the larger the trees, the less the accuracy.
+![ml5](https://user-images.githubusercontent.com/42317258/50927489-f7a89980-147d-11e9-987d-0d6fad8a0b0c.PNG)
+
+Attempts to split data into K groups that are closest to K centroids.
+This can be thought of as creating stereotypes among groups of people.
+The algorithm to implement K means clustering is quite simple.
+
+You randomly pick K centroids
+Assign each datapoint to the centroid closest to it.
+Recompute the centroids based on the average position of each centroid’s points
+Iterate till points stop changing assignments to centroids.
+To predict you just find the centroid they are closest to.
