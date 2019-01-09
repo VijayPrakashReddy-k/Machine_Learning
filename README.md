@@ -21,3 +21,8 @@ It’s a classification algorithm, that is used where the response variable is c
 Contrary to linear regression, logistic regression does not assume a linear relationship between the dependent and independent variables. Although a linear dependence on the logit of the independent variables is assumed.
 In other words, the decision surface is linear.
 ![ml4](https://user-images.githubusercontent.com/42317258/50926686-9f709800-147b-11e9-87e5-845cc36665ef.PNG)
+
+Support vector machine (SVM) is a supervised machine learning algorithm that can be used for both classification and regression challenges.
+In SVM, we plot the data points in an N-dimensional space where N is the number of features and find a hyper-plane to differentiate the datapoints.
+This is a good algorithm when the number of dimensions is high with respect to the number of data points.
+Due to dealing with high dimensional spaces, this algorithm is computationally expensive.
