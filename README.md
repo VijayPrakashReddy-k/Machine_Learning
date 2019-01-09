@@ -26,3 +26,9 @@ Support vector machine (SVM) is a supervised machine learning algorithm that can
 In SVM, we plot the data points in an N-dimensional space where N is the number of features and find a hyper-plane to differentiate the datapoints.
 This is a good algorithm when the number of dimensions is high with respect to the number of data points.
 Due to dealing with high dimensional spaces, this algorithm is computationally expensive.
+![ml6](https://user-images.githubusercontent.com/42317258/50927384-a4364b80-147d-11e9-9eeb-793e82ff6ccd.PNG)
+
+Decision tree is a classifier in the form of a tree structure.
+Decision trees classify instances or examples by starting at the root of the tree and moving through it until a leaf node which is the target value.
+Generating decision trees are useful as they mimic human understanding and thus, the models are easy to understand.
+Small trees are better as the larger the trees, the less the accuracy.
