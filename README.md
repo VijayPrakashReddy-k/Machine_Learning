@@ -62,3 +62,4 @@ Bayes Theorem works on conditional probability. **Conditional probability is the
 
 ->P(x) is the prior probability of predictor.
 
+![n2](https://user-images.githubusercontent.com/42317258/52219056-ea869b00-28c1-11e9-9eb0-ffea8371dda2.PNG)
