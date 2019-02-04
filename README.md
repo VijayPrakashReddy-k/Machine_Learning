@@ -67,6 +67,11 @@ Bayes Theorem works on conditional probability. **Conditional probability is the
 ### Types of Naive Bayes Classier:
 **1.Multinomial Naive Bayes:** This is mostly used for document classication problem, i.e whether a document belongs to the category of sports, politics, technology etc. The features/predictors used by the classier are the frequency of the words present in the document.
 
+![n3](https://user-images.githubusercontent.com/42317258/52220266-7e596680-28c4-11e9-8ee7-70e055e4e444.PNG)
+
 **2.Bernoulli Naive Bayes:** This is similar to the multinomial naive bayes but the predictors are boolean variables. The parameters that we use to predict the class variable take up only values **yes or no**, for example if a word occurs in the text or not.
+
+![n4](https://user-images.githubusercontent.com/42317258/52220277-831e1a80-28c4-11e9-948b-35bc47d7e229.PNG)
+
 
 **3.Gaussian Naive Bayes:** When the predictors take up a continuous value and are not discrete, we assume that these values are sampled from a gaussian distribution.
