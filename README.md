@@ -46,9 +46,11 @@ Iterate till points stop changing assignments to centroids.
 To predict you just find the centroid they are closest to.
 
 ### Naive Bayes algorithm :
-It is a classification technique based on *Bayes’ Theorem* with an assumption of independence among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. For example, a fruit may be considered to be an apple if it is red, round, and about 3 inches in diameter. Even if these features depend on each other or upon the existence of the other features, all of these properties independently contribute to the probability that this fruit is an apple and that is why it is known as ‘Naive’.
-Historically, this technique became popular with applications in *Email filtering, spam detection, and document categorization.*
+It is a classification technique based on **Bayes’ Theorem** with an assumption of independence among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. For example, a fruit may be considered to be an apple if it is red, round, and about 3 inches in diameter. Even if these features depend on each other or upon the existence of the other features, all of these properties independently contribute to the probability that this fruit is an apple and that is why it is known as ‘Naive’.
+Historically, this technique became popular with applications in **Email filtering, spam detection, and document categorization.**
 Naive Bayes model is easy to build and particularly useful for very large data sets. Along with simplicity, Naive Bayes is known to outperform even highly sophisticated classification methods.
+
+Bayes Theorem works on conditional probability. **Conditional probability is the probability that something will happen, given that something else has already occurred**.  Using the conditional probability, we can calculate the probability of an event using its prior knowledge.
 
 ![n1](https://user-images.githubusercontent.com/42317258/52218103-ebb6c880-28bf-11e9-98ab-034e51055630.PNG)
 
