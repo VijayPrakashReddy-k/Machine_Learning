@@ -75,5 +75,4 @@ Bayes Theorem works on conditional probability. **Conditional probability is the
 
 
 **3.Gaussian Naive Bayes:** When the predictors take up a continuous value and are not discrete, we assume that these values are sampled from a gaussian distribution.
-
 ![n11](https://user-images.githubusercontent.com/42317258/52268706-36891c80-2962-11e9-8a18-98cbc59ca3e0.PNG)
