@@ -96,7 +96,7 @@ Prototype-based clustering assumes that most data is located near prototypes; ex
 - The iterative process to get data points in the best clusters possible
 #### i.K-means Clustering :
 You have a set of data that you want to group into and you want to put them into *clusters,* which means objects that are similar in nature and similar in characteristics need to be put together. This is what k-means clustering is all about. The term K is basically is a number and you need to tell the system how many clusters you need to perform. If K is equal to 2, there will be 2 clusters if K is equal to 3, 3 clusters and so on and so forth. That's what the K stands for and of course, there is a way of finding out what is the best or optimum value of K.(Elbow Method)
-![ml5](https://user-images.githubusercontent.com/42317258/50927489-f7a89980-147d-11e9-987d-0d6fad8a0b0c.PNG)
+
 
 Attempts to split data into K groups that are closest to K centroids.
 This can be thought of as creating stereotypes among groups of people.
@@ -107,3 +107,10 @@ Assign each datapoint to the centroid closest to it.
 Recompute the centroids based on the average position of each centroid’s points
 Iterate till points stop changing assignments to centroids.
 To predict you just find the centroid they are closest to.
+
+- A key challenge in Clustering is that you have to pre-set the number of clusters. This influences the quality of clustering.
+- Unlike Supervised Learning, here one does not have ground truth labels. Hence, to check the quality of clustering, one has to use *intrinsic methods,* such as the **within-cluster SSE,** also called **"Distortion".**
+- In the scikit-learn ML library, this value is available via the **inertia_ attribute** after fitting a K-means model.
+- One could plot the Distortion against the number of clusters k. Intuitively, if k increases, distortion should decrease. This is because the samples will be close to their assigned centroids.
+- This plot is called the Elbow method. It indicates the optimum number of clusters at the position of the elbow, the point where distortion begins to increase most rapidly
+- The adjoining Elbow method suggests that k = 3 is the most optimum number of clusters.
