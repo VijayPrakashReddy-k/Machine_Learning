@@ -76,8 +76,9 @@ No labeled responses, the goal is to capture interesting structure or informatio
 - Compress and summarise the data
 - Extract features for supervised learning
 - Discover important clusters or outliers
-## I.CLUSTERING
-## II.DIMENSIONALITY REDUCTION / TRANSFORMATION
+## I.Clustering
+## II.Association Rule Mining
+## II.Dimensionality Reduction / Transformation
 ![u1](https://user-images.githubusercontent.com/42317258/52902748-151a1180-323b-11e9-9553-960d49dc815f.PNG)
 ![u2](https://user-images.githubusercontent.com/42317258/52902750-1c411f80-323b-11e9-9439-143506b8d8fb.PNG)
 
@@ -90,16 +91,22 @@ No labeled responses, the goal is to capture interesting structure or informatio
 The types of Clustering Algorithms are: <br>
 - 1.Prototype-Based Clustering <br>
 - 2.Graph-Based Clustering (Contiguity-Based Clustering) <br>
-- 3.Density-Based Clustering (DBSCAN) <br>
-- 4.Well Separated Cluster <br>
+- 3.Density-Based Clustering <br>
+- 4.Well Separated Clustering <br>
 
 ![imgonline-com-ua-twotoone-r8gkhrwveobfuwqw](https://user-images.githubusercontent.com/42317258/52966715-fa2bd680-33cd-11e9-94e6-ed6070663018.png)
 
 ### 1.Prototype-based Clustering :
-Prototype-based clustering assumes that most data is located near prototypes; example: centroids (average) or medoid (most frequently occurring point) K-means, a Prototype-based method, is the most popular method for clustering that involves:
+· If the data is *Numerical,* the prototype of the cluster is often **a Centroid i.e., the average of all the points in the cluster.**
+· If the data has *Categorical attributes,* the prototype of the cluster is often **a medoid i.e., the most representative point of the cluster.**
+· Objects in the cluster are closer to the prototype of the cluster than to the prototype of any other cluster.
+· Prototype based clusters can also be referred to as **“Center-Based” Clusters.**
+· These clusters tend to be **globular.(Circular)**
+· **K-Means and K-Medoids** are the examples of Prototype Based Clustering algorithms
+Prototype-based clustering assumes that most data is located near prototypes; example: **Centroids (average) or medoid (most frequently occurring point)** K-means, a Prototype-based method, is the most popular method for clustering that involves:
+- Training data that gets assigned to matching cluster based on similarity <br>
+- The iterative process to get data points in the best clusters possible <br>
 
-- Training data that gets assigned to matching cluster based on similarity
-- The iterative process to get data points in the best clusters possible
 #### i.K-means Clustering :
 You have a set of data that you want to group into and you want to put them into *clusters,* which means objects that are similar in nature and similar in characteristics need to be put together. This is what k-means clustering is all about. 
 
@@ -119,21 +126,46 @@ The algorithm to implement K means clustering is quite simple.
 -> 2.Assign each datapoint to the centroid closest to it.<br>
 -> 3.Recompute the centroids based on the average position of each centroid’s points <br>
 -> 4.Iterate till points stop changing assignments to centroids. <br>
-To predict you just find the centroid they are closest to.
+To predict you just find the centroid they are closest to. <br>
 
-- A key challenge in Clustering is that you have to pre-set the number of clusters. This influences the quality of clustering.
+**Algorithm :**
+The algorithms starts with initial estimates for the **Κ centroids,** which can either be randomly generated or randomly selected from the data set. The algorithm then iterates between two steps:
+
+**1. Data assigment step :**
+- Each Centroid defines one of the clusters. In this step, each data point is assigned to its nearest centroid, based on the squared Euclidean distance. More formally, if **ci is the collection of centroids in set C, then each data point x is assigned to a cluster based on**
+
+              argmin   dist(Ci,x)^2
+      Ci belongs to C
+      
+where dist( · ) is the standard (L2) Euclidean distance. Let the set of data point assignments for each ith cluster centroid be Si.
+
+**2. Centroid update step :**
+- In this step, the **centroids are recomputed.** This is done by taking the mean of all data points assigned to that centroid's cluster.
+
+            Ci = 1/|Si| summation of (Xi)
+                        Xi belongs to Si
+                        
+The algorithm iterates between steps one and two until a stopping criteria is met (i.e., no data points change clusters, the sum of the distances is minimized, or some maximum number of iterations is reached).
+
+- **A key challenge in Clustering is that you have to pre-set the number of clusters.** This influences the Quality of clustering.
 - Unlike Supervised Learning, here one does not have ground truth labels. Hence, to check the quality of clustering, one has to use *intrinsic methods,* such as the **within-cluster SSE,** also called **"Distortion".**
 
 ![u7](https://user-images.githubusercontent.com/42317258/52905214-1fe59e00-325d-11e9-9ecc-517c65071162.PNG)
 
 - In the scikit-learn ML library, this value is available via the **inertia_ attribute** after fitting a K-means model.
 - One could plot the Distortion against the number of clusters k. Intuitively, if k increases, distortion should decrease. This is because the samples will be close to their assigned centroids.
-- This plot is called the Elbow method. It indicates the optimum number of clusters at the position of the elbow, the point where distortion begins to increase most rapidly
+- This plot is called the **Elbow method.** It indicates the optimum number of clusters at the position of the elbow, the point where distortion begins to increase most rapidly.
 - The adjoining Elbow method suggests that k = 3 is the most optimum number of clusters.
 
-
+### 2.Graph-Based Clustering (Contiguity-Based Clustering) :
 
 ![u5](https://user-images.githubusercontent.com/42317258/52905207-11978200-325d-11e9-9481-458d3a896e2e.PNG)
+· Two objects are connected only if they are within a specified distance of each other.
+· Each point in a cluster is closer to at least one point in the same cluster than to any point in a different cluster.
+· Useful when clusters are **irregular and intertwined(twist or twine together).**
+· This does **not work efficiently when there is noise in the data,** as shown in the below picture, a small bridge of points can merge two distinct clusters into one.
 
+· Clique is another type of Graph Based Cluster
+· Agglomerative hierarchical clustering has close relation with Graph based clustering technique.
 
 
