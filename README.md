@@ -83,11 +83,17 @@ No labeled responses, the goal is to capture interesting structure or informatio
 
 ## I.Clustering :
 - Cluster analysis or clustering is the most commonly used technique of unsupervised learning. It is used to find data clusters such that each cluster has the most closely matched data.<br>
+
+![a1](https://user-images.githubusercontent.com/42317258/52966741-09ab1f80-33ce-11e9-89b3-8e8577c432cb.PNG)
+
 **Clustering Algorithms :** <br>
 The types of Clustering Algorithms are: <br>
-- 1.Prototype-based Clustering <br>
-- 2.Hierarchical Clustering <br>
-- 3.Density-based Clustering (DBSCAN) <br>
+- 1.Prototype-Based Clustering <br>
+- 2.Graph-Based Clustering (Contiguity-Based Clustering) <br>
+- 3.Density-Based Clustering (DBSCAN) <br>
+- 4.Well Separated Cluster <br>
+
+![imgonline-com-ua-twotoone-r8gkhrwveobfuwqw](https://user-images.githubusercontent.com/42317258/52966715-fa2bd680-33cd-11e9-94e6-ed6070663018.png)
 
 ### 1.Prototype-based Clustering :
 Prototype-based clustering assumes that most data is located near prototypes; example: centroids (average) or medoid (most frequently occurring point) K-means, a Prototype-based method, is the most popular method for clustering that involves:
