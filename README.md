@@ -156,6 +156,16 @@ The algorithm iterates between steps one and two until a stopping criteria is me
 - One could plot the Distortion against the number of clusters k. Intuitively, if k increases, distortion should decrease. This is because the samples will be close to their assigned centroids.
 - This plot is called the **Elbow method.** It indicates the optimum number of clusters at the position of the elbow, the point where distortion begins to increase most rapidly.
 - The adjoining Elbow method suggests that k = 3 is the most optimum number of clusters.
+**Advantages :**	<br>
+• Easy	to	implement	<br>
+• With	a	large	number	of	variables,	K-Means	may	be	computaHonally	faster	than	hierarchical	clustering	(if	K	is	small).	<br>
+• k-Means	may	produce	Hghter	clusters	than	hierarchical	clustering	<br>
+• An	instance	can	change	cluster	(move	to	another	cluster)	when	the	centroids	are	recomputed.	<br>
+**Disavantages	:** <br>
+• Difficult	to	predict	the	number	of	clusters	(K-Value) <br>	
+• Initial	seeds	have	a	strong	impact	on	the	final	results	<br>
+• The	order	of	the	data	has	an	impact	on	the	final	results	<br>
+• Sensitive	to	scale:	Rescaling	your	datasets	(Normalization	or	Standardization)	will	completely	change	results.	While	this	itself	is	not	bad,	not	realizing	that	you	have	to	spend	extra	attention	to	scaling	your	data	might	be	bad.	
 
 ### 2.Graph-Based Clustering (Contiguity-Based Clustering) :
 
@@ -168,4 +178,12 @@ The algorithm iterates between steps one and two until a stopping criteria is me
 · Clique is another type of Graph Based Cluster
 · Agglomerative hierarchical clustering has close relation with Graph based clustering technique.
 
-
+**Advantages :**	<br>
+• Hierarchical	clustering	outputs	a	hierarchy,	i.e	**a	Structure	that	is	more	informative**	than	the	unstructured	set	of	flat	clusters	returned	by	k-means.	Therefore,	it	is	easier	to	decide	on	the	number	of	clusters	by	looking	at	the	dendrogram.<br>
+• Easy	to	implement	<br>
+**Disavantages	:** <br>
+• It	is	not	possible	to	undo	the	previous	step:	once	the	instances	have	been	assigned	to	a	cluster,	they	can	no	longer	be	moved	around.<br>
+• Time	complexity:	not	suitable	for	large	datasets	<br>
+• Initial	seeds	have	a	strong	impact	on	the	final	results	<br>
+• The	order	of	the	data	has	an	impact	on	the	final	results	<br>
+• Very	sensiHve	to	outliers <br>
