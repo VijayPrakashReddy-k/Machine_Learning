@@ -156,32 +156,32 @@ The algorithm iterates between steps one and two until a stopping criteria is me
 - One could plot the Distortion against the number of clusters k. Intuitively, if k increases, distortion should decrease. This is because the samples will be close to their assigned centroids.
 - This plot is called the **Elbow method.** It indicates the optimum number of clusters at the position of the elbow, the point where distortion begins to increase most rapidly.
 - The adjoining Elbow method suggests that k = 3 is the most optimum number of clusters.
-**Advantages :**	<br>
+### Advantages :	
 • Easy	to	implement	<br>
 • With	a	large	number	of	variables,	K-Means	may	be	computaHonally	faster	than	hierarchical	clustering	(if	K	is	small).	<br>
 • k-Means	may	produce	Hghter	clusters	than	hierarchical	clustering	<br>
 • An	instance	can	change	cluster	(move	to	another	cluster)	when	the	centroids	are	recomputed.	<br>
-**Disavantages	:** <br>
+### Disavantages	:
 • Difficult	to	predict	the	number	of	clusters	(K-Value) <br>	
 • Initial	seeds	have	a	strong	impact	on	the	final	results	<br>
 • The	order	of	the	data	has	an	impact	on	the	final	results	<br>
 • Sensitive	to	scale:	Rescaling	your	datasets	(Normalization	or	Standardization)	will	completely	change	results.	While	this	itself	is	not	bad,	not	realizing	that	you	have	to	spend	extra	attention	to	scaling	your	data	might	be	bad.	
 
 ### 2.Graph-Based Clustering (Contiguity-Based Clustering) :
-
+There are **Two top-level methods** for finding these hierarchical clusters: <br>
+- Agglomerative clustering uses **a Bottom-up approach,** wherein each data point starts in its own cluster. These clusters are then joined greedily, by taking the two most similar clusters together and merging them.<br>
+- Divisive clustering uses **a Top-down approach,** wherein all data points start in the same cluster. You can then use a **parametric clustering algorithm like K-Means to divide the cluster into two clusters**.
+- For each cluster, you further divide it down to two clusters until you hit the desired number of clusters.
+- Both of these approaches rely on constructing a similarity matrix between all of the data points, which is usually calculated by **cosine or Jaccard distance.**
 ![u5](https://user-images.githubusercontent.com/42317258/52905207-11978200-325d-11e9-9481-458d3a896e2e.PNG)
-· Two objects are connected only if they are within a specified distance of each other.
-· Each point in a cluster is closer to at least one point in the same cluster than to any point in a different cluster.
-· Useful when clusters are **irregular and intertwined(twist or twine together).**
-· This does **not work efficiently when there is noise in the data,** as shown in the below picture, a small bridge of points can merge two distinct clusters into one.
 
-· Clique is another type of Graph Based Cluster
-· Agglomerative hierarchical clustering has close relation with Graph based clustering technique.
+·**Clique** is another type of Graph Based Cluster <br>
+· **Agglomerative hierarchical clustering** has close relation with Graph based clustering technique.
 
-**Advantages :**	<br>
+### Advantages :
 • Hierarchical	clustering	outputs	a	hierarchy,	i.e	**a	Structure	that	is	more	informative**	than	the	unstructured	set	of	flat	clusters	returned	by	k-means.	Therefore,	it	is	easier	to	decide	on	the	number	of	clusters	by	looking	at	the	dendrogram.<br>
 • Easy	to	implement	<br>
-**Disavantages	:** <br>
+### Disavantages	:
 • It	is	not	possible	to	undo	the	previous	step:	once	the	instances	have	been	assigned	to	a	cluster,	they	can	no	longer	be	moved	around.<br>
 • Time	complexity:	not	suitable	for	large	datasets	<br>
 • Initial	seeds	have	a	strong	impact	on	the	final	results	<br>
