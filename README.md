@@ -17,12 +17,27 @@ With linear regression, the objective is to fit a line through the distribution 
 In simple linear regression, the regression line minimizes the sum of distances from the individual points, that is, the sum of the “Square of Residuals”. Hence, this method is also called the “Ordinary Least Square”.
 Linear regression can also be achieved in case of multidimensional data i.e. data-sets that have multiple features. In this case, the ‘line’ is just a higher dimensional plane with dimensions ‘N-1’, N being the dimension of the dataset.
 ## b) Classification (When response is a categorical value)
-#### Logistic Regression
+
+![classi](https://user-images.githubusercontent.com/42317258/53302163-56d13a80-3881-11e9-9256-53cf1884923d.jpeg)
+
+#### 1.Logistic Regression
+
 ![ml3](https://user-images.githubusercontent.com/42317258/50926175-62f06c80-147a-11e9-8c1f-4fd239cfa32f.PNG)
 
 It’s a classification algorithm, that is used where the response variable is categorical. The idea of Logistic Regression is to find a relationship between features and probability of particular outcome.
 Contrary to linear regression, logistic regression does not assume a linear relationship between the dependent and independent variables. Although a linear dependence on the logit of the independent variables is assumed.
 In other words, the decision surface is linear.
+
+**Types of Logistic Regression:**<br>
+1. Binary Logistic Regression:<br>
+- The categorical response has only two 2 possible outcomes.<br>
+             E.g.: Spam or Not <br>
+2. Multinomial Logistic Regression: <br>
+- Three or more categories without ordering. <br>
+            E.g.: Predicting which food is preferred more (Veg, Non-Veg, Vegan)
+3. Ordinal Logistic Regression:<br>
+- Three or more categories with ordering. <br>
+           E.g.: Movie rating from 1 to 5
 ![ml4](https://user-images.githubusercontent.com/42317258/50926686-9f709800-147b-11e9-87e5-845cc36665ef.PNG)
 
 Support vector machine (SVM) is a supervised machine learning algorithm that can be used for both classification and regression challenges.
