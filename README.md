@@ -182,16 +182,38 @@ The algorithm iterates between steps one and two until a stopping criteria is me
 • The	order	of	the	data	has	an	impact	on	the	final	results	<br>
 • Sensitive	to	scale:	Rescaling	your	datasets	(Normalization	or	Standardization)	will	completely	change	results.	While	this	itself	is	not	bad,	not	realizing	that	you	have	to	spend	extra	attention	to	scaling	your	data	might	be	bad.	
 
-### 2.Graph-Based Clustering (Contiguity-Based Clustering) :
-There are **Two top-level methods** for finding these hierarchical clusters: <br>
-- Agglomerative clustering uses **a Bottom-up approach,** wherein each data point starts in its own cluster. These clusters are then joined greedily, by taking the two most similar clusters together and merging them.<br>
+### 2.Graph-Based Clustering (Contiguity-Based Clustering) :<br>
+- Hierarchical clustering algorithms actually fall into 2 categories: **Top-down or Bottom-up.** <br>
+- Bottom-up algorithms treat each data point as a single cluster at the outset and then successively merge (or agglomerate) pairs of clusters until all clusters have been merged into a single cluster that contains all data points.<br>
+- Bottom-up hierarchical clustering is therefore called **"hierarchical agglomerative clustering or HAC".** <br>
+- This hierarchy of clusters is represented as a tree (or dendrogram). The root of the tree is the unique cluster that gathers all the samples, the leaves being the clusters with only one sample. <br>
 - Divisive clustering uses **a Top-down approach,** wherein all data points start in the same cluster. You can then use a **parametric clustering algorithm like K-Means to divide the cluster into two clusters**.
 - For each cluster, you further divide it down to two clusters until you hit the desired number of clusters.
 - Both of these approaches rely on constructing a similarity matrix between all of the data points, which is usually calculated by **cosine or Jaccard distance.**
+
 ![u5](https://user-images.githubusercontent.com/42317258/52905207-11978200-325d-11e9-9481-458d3a896e2e.PNG)
 
 ·**Clique** is another type of Graph Based Cluster <br>
-· **Agglomerative hierarchical clustering** has close relation with Graph based clustering technique.
+· **Agglomerative hierarchical clustering** has close relation with Graph based clustering technique. <br>
+
+#### i.Hierarchical agglomerative clustering or HAC : <br>
+- Hierarchical clustering treats each data point as a singleton cluster, and then successively merges clusters until all points have been merged into a single remaining cluster. A hierarchical clustering is often represented as a dendrogram.
+
+In complete-link (or complete linkage) hierarchical clustering, we merge in each step the two clusters whose merger has the smallest diameter (or: the two clusters with the smallest maximum pairwise distance).
+
+In single-link (or single linkage) hierarchical clustering, we merge in each step the two clusters whose two closest members have the smallest distance (or: the two clusters with the smallest minimum pairwise distance).
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Advantages :
 • Hierarchical	clustering	outputs	a	hierarchy,	i.e	**a	Structure	that	is	more	informative**	than	the	unstructured	set	of	flat	clusters	returned	by	k-means.	Therefore,	it	is	easier	to	decide	on	the	number	of	clusters	by	looking	at	the	dendrogram.<br>
