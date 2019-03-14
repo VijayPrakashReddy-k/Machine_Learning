@@ -197,14 +197,26 @@ The algorithm iterates between steps one and two until a stopping criteria is me
 · **Agglomerative hierarchical clustering** has close relation with Graph based clustering technique. <br>
 
 #### i.Hierarchical agglomerative clustering or HAC : <br>
-- Hierarchical clustering treats each data point as a singleton cluster, and then successively merges clusters until all points have been merged into a single remaining cluster. A hierarchical clustering is often represented as a dendrogram.
+- Hierarchical clustering treats each data point as a singleton cluster, and then successively merges clusters until all points have been merged into a single remaining cluster. **A hierarchical clustering is often represented as a "Dendrogram".**
 
-In complete-link (or complete linkage) hierarchical clustering, we merge in each step the two clusters whose merger has the smallest diameter (or: the two clusters with the smallest maximum pairwise distance).
+**1.In single-link (or single linkage) hierarchical clustering**, we merge in each step the two clusters whose two closest members have the smallest distance (or) the two clusters with the smallest minimum pairwise distance.
 
-In single-link (or single linkage) hierarchical clustering, we merge in each step the two clusters whose two closest members have the smallest distance (or: the two clusters with the smallest minimum pairwise distance).
+**2.In complete-link (or complete linkage) hierarchical clustering**, we merge in each step the two clusters whose merger has the smallest diameter (or) the two clusters with the smallest maximum pairwise distance.
+
+**3.In average linkage hierarchical clustering**, the distance between two clusters is defined as the average distance between each point in one cluster to every point in the other cluster.
+
+![HA1](https://user-images.githubusercontent.com/42317258/54376728-b4e78580-46a9-11e9-8219-e8233ce02798.jpg)
 
 
+![d7](https://user-images.githubusercontent.com/42317258/54376739-b913a300-46a9-11e9-8625-eeeff3c5b89e.PNG)
 
+**Dendrogram :** <br>
+- 1.Bottom level represents all the Observations. <br>
+- 2.When two observations are merged,Vertical lines representing the distance between them are depicted to join together. <br>
+- 3.It can be used to find out the number of Observations in each cluster if number of clusters to be created is specified.
+                 By Sliding a horizontal line up and down to achieve the number of interactions equals to the number of desired Clusters.
+               
+![d1](https://user-images.githubusercontent.com/42317258/54376752-bdd85700-46a9-11e9-88cc-618477625b42.PNG)
 
 
 
