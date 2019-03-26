@@ -199,6 +199,7 @@ The algorithm iterates between steps one and two until a stopping criteria is me
 #### i.Hierarchical agglomerative clustering or HAC : <br>
 - Hierarchical clustering treats each data point as a singleton cluster, and then successively merges clusters until all points have been merged into a single remaining cluster. **A hierarchical clustering is often represented as a "Dendrogram".**
 
+##### Linkage Methods : <br>
 **1.In single-link (or single linkage) hierarchical clustering**, we merge in each step the two clusters whose two closest members have the smallest distance (or) the two clusters with the smallest minimum pairwise distance.
 
 **2.In complete-link (or complete linkage) hierarchical clustering**, we merge in each step the two clusters whose merger has the smallest diameter (or) the two clusters with the smallest maximum pairwise distance.
@@ -235,9 +236,9 @@ The algorithm iterates between steps one and two until a stopping criteria is me
 - Often visualized using a 2-dimensional scatterplot <br>
 - Also used for compression, finding features for supervised learning. <br>
 
-### 1. Principal Component Analysis <br>
-### 2. Multi-Dimensional Scaling (MDS) <br>
-### 3.t-Distributed Stochastic Neighbor Embedding (t-SNE) <br>
+### 1. Principal Component Analysis (PCA)<br>
+### 2.t-Distributed Stochastic Neighbor Embedding (t-SNE) <br>
+### 3.Linear Discriminant Analysis (LDA) <br>
 
 ### 1. Principal Component Analysis <br>
 - The central idea of principal component analysis (PCA) is to reduce the dimensionality of a data set consisting of a large number of interrelated variables while retaining as much as possible of the variation present in the data set. <br>
@@ -246,12 +247,15 @@ The algorithm iterates between steps one and two until a stopping criteria is me
 #### Math Behind PCA <br>
  PCA can be thought of as an unsupervised learning problem. The whole process of obtaining principle components from a raw dataset can be simplified in six parts :
 - 1.Take the whole dataset consisting of d+1 dimensions and ignore the labels such that our new dataset becomes d dimensional.
-- 2.Compute the mean for every dimension of the whole dataset.
-- 3.Compute the covariance matrix of the whole dataset.
-- 4.Compute eigenvectors and the corresponding eigenvalues.
+- 2.Compute the **mean** for every dimension of the whole dataset.
+- 3.Compute the **covariance matrix** of the whole dataset.
+- 4.Compute **eigenvectors** and the corresponding **eigenvalues.**
 - 5.Sort the eigenvectors by decreasing eigenvalues and choose k eigenvectors with the largest eigenvalues to form a d × k dimensional matrix W.
 - 6.Use this d × k eigenvector matrix to transform the samples onto the new subspace.
 
 ![P1](https://user-images.githubusercontent.com/42317258/54706741-a1cf2c80-4b65-11e9-9b6d-ccafd919adc0.PNG)
 
 PCA summarises multiple fields of data into principal components, usually just 2 so that it is easier to visualise in a 2-dimensional plot. The 1st component will show the most variance of the entire dataset in the hyperplane, while the 2nd shows the 2nd shows the most variance at a right angle to the 1st. Because of the strong variance between data points, patterns tend to be teased out from a high dimension to even when there’s just two dimensions. These 2 components can serve as new features for a supervised analysis.
+
+### 2.t-Distributed Stochastic Neighbor Embedding (t-SNE) <br>
+t-SNE (t-distributed Stochastic Neighbor Embedding) is a data visualization technique, which maps the high dimensional data to some low dimensions for us to visualize.
