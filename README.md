@@ -290,10 +290,20 @@ So in a given transaction with multiple items, it tries to find the rules that g
 - 1.**The probability** that a customer will buy beer without a bar meal (i.e. that the antecedent is true) is referred to as **the support for the rule.** <br>
 - 2.**The conditional probability** that a customer will purchase crisps is referred to as **the confidence.** <br>
 
-- **Example :** *Assume there are 100 customers,10 of them bought milk, 8 bought butter and 6 bought both of them.*
-<br>
+- **Example :** *Assume there are 100 customers,10 of them bought milk, 8 bought butter and 6 bought both of them.*<br>
+
 **bought milk => bought butter** <br>
+- In the above example, the {milk} is the antecedent and the {butter} is the consequent. **Both antecedents and consequents can have multiple items**. In other words, {Diaper, Gum} -> {Beer, Chips} is a valid rule.<br>
 
 - support = P(Milk & Butter) = 6/100 = 0.06 <br>
 - confidence = support/P(Butter) = 0.06/0.08 = 0.75 <br>
 - lift = confidence/P(Milk) = 0.75/0.10 = 7.5 <br>
+
+![A1](https://user-images.githubusercontent.com/42317258/56830055-f5c6e280-6882-11e9-934b-e9184230a9a2.PNG)
+![a2](https://user-images.githubusercontent.com/42317258/56830065-f95a6980-6882-11e9-8855-729c6738618e.PNG)
+
+- **Support** is the relative frequency that the rules show up. In many instances, you may want to look for high support in order to make sure it is a useful relationship. However, there may be instances where a low support is useful if you are trying to find “hidden” relationships.
+
+-**Confidence** is a measure of the reliability of the rule. A confidence of .75 in the above example would mean that in 75% of the cases where Milk and butter were purchased. For product recommendation, a 50% confidence may be perfectly acceptable but in a medical situation, this level may not be high enough.
+
+- **Lift** is the ratio of the observed support to that expected if the two rules were independent. The basic rule of thumb is that a lift value close to 1 means the rules were completely independent. **Lift values > 1 are generally more “interesting” and could be indicative of a useful rule pattern.**
