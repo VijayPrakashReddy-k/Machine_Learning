@@ -2,10 +2,10 @@
 "Data is the new oil" is a saying which you must have heard by now along with the huge interest building up around Big Data and Machine Learning in the recent past along with Artificial Intelligence and Deep Learning. Besides this, data scientists have been termed as having "The sexiest job in the 21st Century" which makes it all the more worthwhile to build up some valuable expertise in these areas. Getting started with machine learning in the real world can be overwhelming with the vast amount of resources out there on the web. It's About ML Algorithms and Datasets.
 ![u4](https://user-images.githubusercontent.com/42317258/52902951-e81b2e00-323d-11e9-887f-fe1cddbbee6d.PNG)
 
-Machine learning algorithms have 3 broad categories -
-1.Supervised learning — the input features and the output labels are defined.
-2.Unsupervised learning — the dataset is unlabeled and the goal is to discover hidden relationships.
-3.Reinforcement learning — some form of feedback loop is present and there is a need to optimize some parameter.
+Machine learning algorithms have 3 broad categories - <br>
+**1.Supervised learning** — *the input features and the output labels are defined.* <br>
+**2.Unsupervised learning** — *the dataset is unlabeled and the goal is to discover hidden relationships.*<br>
+**3.Reinforcement learning** — *some form of feedback loop is present and there is a need to optimize some parameter.*<br>
 
 ![u3](https://user-images.githubusercontent.com/42317258/52902946-e18cb680-323d-11e9-8658-eed2c58228d7.PNG)
  ![ml1](https://user-images.githubusercontent.com/42317258/50925123-61717500-1477-11e9-9b73-6fe5eb5c57d9.PNG)
@@ -259,3 +259,21 @@ PCA summarises multiple fields of data into principal components, usually just 2
 
 ### 2.t-Distributed Stochastic Neighbor Embedding (t-SNE) <br>
 t-SNE (t-distributed Stochastic Neighbor Embedding) is a data visualization technique, which maps the high dimensional data to some low dimensions for us to visualize.
+
+## III.Association Rule Mining : <br>
+Association rule mining is **a procedure which is meant to find frequent patterns, correlations, associations, or causal structures from data sets found in various kinds of databases such as relational databases, transactional databases, and other forms of data repositories.** <br>
+- Given a set of transactions, association rule mining aims to find the rules which enable us to predict the occurrence of a specific item based on the occurrences of the other items in the transaction.
+
+Association rule mining is the data mining **process of finding the rules that may govern associations and causal objects between sets of items.**
+
+So in a given transaction with multiple items, it tries to find the rules that govern how or why such items are often bought together.<br> *For example, peanut butter and jelly are often bought together because a lot of people like to make PB&J sandwiches.*
+
+- *Also surprisingly, diapers and beer are bought together because, as it turns out, that dads are often tasked to do the shopping while the moms are left with the baby.*
+
+#### The main applications of association rule mining : <br>
+- **1.Basket data analysis** - is to analyze the association of purchased items in a single basket or single purchase as per the examples given above.<br>
+
+- **2.Cross marketing** - is to work with other businesses that complement your own, not competitors. 
+*For example, vehicle dealerships and manufacturers have cross marketing campaigns with oil and gas companies for obvious reasons.*
+
+- **3.Catalog design** - the selection of items in a business’ catalog are often designed to complement each other so that buying one item will lead to buying of another. So these items are often complements or very related.
