@@ -271,9 +271,29 @@ So in a given transaction with multiple items, it tries to find the rules that g
 - *Also surprisingly, diapers and beer are bought together because, as it turns out, that dads are often tasked to do the shopping while the moms are left with the baby.*
 
 #### The main applications of association rule mining : <br>
-- **1.Basket data analysis** - is to analyze the association of purchased items in a single basket or single purchase as per the examples given above.<br>
+- **1.Market Basket data analysis** - is to analyze the association of purchased items in a single basket or single purchase as per the examples given above.<br>
 
 - **2.Cross marketing** - is to work with other businesses that complement your own, not competitors. 
 *For example, vehicle dealerships and manufacturers have cross marketing campaigns with oil and gas companies for obvious reasons.*
 
 - **3.Catalog design** - the selection of items in a business’ catalog are often designed to complement each other so that buying one item will lead to buying of another. So these items are often complements or very related.
+
+### Market Basket data analysis : <br>
+- Market Basket Analysis is **a modelling technique based upon the theory that if you buy a certain group of items, you are more (or less) likely to buy another group of items.**
+- *For example, if you are in an English pub and you buy a pint of beer and don't buy a bar meal, you are more likely to buy crisps (US. chips) at the same time than somebody who didn't buy beer.*
+
+- The set of items a customer buys is referred to as an itemset, and *market basket analysis seeks to find relationships between purchases.*
+
+##### Typically the relationship will be in the form of a rule:
+                                       IF {beer, no bar meal} THEN {crisps}.
+                                       
+- 1.**The probability** that a customer will buy beer without a bar meal (i.e. that the antecedent is true) is referred to as **the support for the rule.** <br>
+- 2.**The conditional probability** that a customer will purchase crisps is referred to as **the confidence.** <br>
+
+- **Example :** *Assume there are 100 customers,10 of them bought milk, 8 bought butter and 6 bought both of them.*
+<br>
+**bought milk => bought butter** <br>
+
+- support = P(Milk & Butter) = 6/100 = 0.06 <br>
+- confidence = support/P(Butter) = 0.06/0.08 = 0.75 <br>
+- lift = confidence/P(Milk) = 0.75/0.10 = 7.5 <br>
