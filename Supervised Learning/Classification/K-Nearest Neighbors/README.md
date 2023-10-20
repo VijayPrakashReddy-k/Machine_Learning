@@ -117,7 +117,7 @@ Both are wrapper methods where the idea is to either incrementally add features 
 
 ### Impact of Correlated Predictors in K-Nearest Neighbors Models
 
-Correlated variables that are in a k-nearest neighbors model will create redundant terms in the distance calculations. If your predictor variables are highly correlated, consider replacing your predictors with a reduced dimension principal component vectors.
+Correlated variables that are in a k-nearest neighbors model will create redundant terms in the distance calculations. If your predictor variables are highly correlated, consider replacing your predictors with reduced-dimension principal component vectors.
 
 
 ### Distance Metrics in K-Nearest Neighbors Models
@@ -147,3 +147,45 @@ Also known as the “taxicab” or “city block” distance, it calculates the 
 d(p,q)=\sum_{i=1}^n|p_i−q_i|
 ```
 Manhattan distance can be more robust to outliers in some cases as compared to Euclidean distance.
+
+**3. Minkowski Distance:**
+
+Minkowski distance generalizes both Euclidean and Manhattan distances. It introduces a parameter p which allows you to adjust the calculation.
+```math
+d(p,q)=(\sum_{i=1}^n|p_i−q_i|^p)^{1/p}
+```
+
+- **When p=2, it becomes the Euclidean distance. When p=1, it’s the Manhattan distance.**
+
+**4. Hamming Distance:**
+
+Primarily used for categorical variables, the Hamming distance calculates the difference between two strings of equal length by comparing each corresponding position.
+```math
+d(p,q)=\sum_{i=1}^nI(pi≠qi)
+```
+Where I
+ is the indicator function which is 1 when pi≠qi
+ and 0 otherwise.
+
+**5. Mahalanobis Distance:**
+
+Unlike the above metrics, Mahalanobis distance takes into account the correlations among variables. It measures distance concerning the centroid of a dataset and the covariance between variables.
+
+```math
+d(p,q)=\sqrt{(p−q)^{'}Σ^{−1}(p−q)}
+```
+
+Where Σ−1
+ is the inverse of the covariance matrix of the dataset. This metric can be useful when predictors are correlated.
+
+### Considerations When Choosing a Distance Metric
+
+**1. Nature of Data:** Continuous variables often align well with Euclidean or Manhattan distances. For categorical data, Hamming or other categorical-specific distances might be more appropriate.
+
+**2. Feature Scaling:** Distance metrics like Euclidean are sensitive to the scale of data. Ensure features are normalized or standardized before applying such metrics.
+
+**3. Correlations:** If predictors are correlated, Mahalanobis distance can offer a better measure by accounting for this correlation.
+
+**4. Data Distribution:** Some distance metrics might be more appropriate depending on the distribution and structure of the data. It’s essential to understand the data and potentially experiment with different metrics.
+
+**5. Computational Efficiency:** Some metrics, especially those requiring matrix inversion or complex calculations, can be computationally expensive. It’s essential to consider the efficiency, especially with large datasets.
